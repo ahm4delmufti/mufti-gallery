@@ -1,0 +1,110 @@
+.root{ }
+:root{--accent:#6b4f3f;--muted:#666;--bg:#fff;--header-height:72px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;color:#222;background:var(--bg);line-height:1.45;padding-top:var(--header-height)}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:rgba(255,255,255,0.98);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(6px);position:fixed;left:0;right:0;top:0;z-index:120}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;min-height:var(--header-height);padding:0 1rem}
+.brand{margin:0;color:var(--accent);display:flex;align-items:center;gap:.6rem}
+.brand img.logo{height:46px;width:auto;display:block}
+.site-footer .logo-small{height:20px;width:auto;vertical-align:middle;margin-right:.6rem}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.hero{background-image:linear-gradient(rgba(11,7,5,0.46),rgba(11,7,5,0.24)), url('images/Sahara by tariq elshebly.jpg');background-size:cover;background-position:center;background-attachment:fixed;min-height:calc(100vh - var(--header-height));height:calc(100vh - var(--header-height));display:flex;align-items:center;padding:0;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.03), transparent 18%), radial-gradient(circle at 90% 85%, rgba(0,0,0,0.06), transparent 25%);mix-blend-mode:overlay}
+.hero h2{margin:0 0 .5rem;font-size:2.2rem;color:#fff;text-shadow:0 10px 28px rgba(0,0,0,0.45)}
+.hero p{color:rgba(255,255,255,0.88);max-width:820px;margin:0 auto}
+.hero .btn{background:rgba(255,255,255,0.12);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.12)}
+
+/* Hero slideshow */
+.hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.03);transition:opacity 1s ease,transform 8s linear}
+.hero-slides img.active{opacity:1;transform:scale(1)}
+.hero > .container{position:relative;z-index:2;padding:3rem 1rem}
+
+/* Active nav link styling */
+.nav a.active{color:var(--accent);font-weight:700;box-shadow:inset 0 -3px 0 var(--accent)}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.featured h3,.about h3,.contact h3{margin-top:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.card{border:1px solid #eee;border-radius:8px;overflow:hidden;background:#fff}
+.card img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:.6rem}
+.card-title{font-weight:600;margin:0 0 .25rem}
+.card-price{color:var(--accent);font-weight:600}
+.site-footer{border-top:1px solid #eee;padding:.6rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
+.site-footer{border-top:1px solid #eee;padding:.6rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
+.modal.hidden{display:none}
+.modal-content{background:#fff;padding:1rem;border-radius:8px;max-width:760px;width:95%}
+.modal-close{position:absolute;right:1rem;top:1rem;border:0;background:transparent;font-size:1.5rem}
+/* cart collapsed rule removed */
+@media(max-width:900px){.site-header .container{flex-direction:column;align-items:flex-start}}
+
+@media(max-width:560px){
+	
+}
+.small{font-size:.9rem;color:var(--muted)}
+
+/* Animations & reveal */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroFloat{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+.reveal-hidden{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .55s ease}
+.reveal{opacity:1;transform:none}
+
+.hero h2{animation:heroFloat 6s ease-in-out infinite}
+
+.card{transition:transform .22s ease,box-shadow .22s ease}
+.card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 30px rgba(34,34,34,0.08)}
+
+/* Cart styles removed — site is display-only */
+
+/* Scroll to top button */
+.scroll-top{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:0;padding:.6rem .8rem;border-radius:999px;box-shadow:0 8px 18px rgba(0,0,0,0.12);cursor:pointer;display:none;z-index:60}
+.scroll-top.show{display:block}
+
+/* Sidebar layout */
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:220px;background:var(--bg);border-right:1px solid #eee;padding:1rem 0;z-index:50;overflow:auto;transform:translateX(-110%);transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+.sidebar.open{transform:translateX(0)}
+.sidebar .container{padding:0 1rem}
+.sidebar .nav{display:flex;flex-direction:column;gap:.6rem}
+.sidebar .nav a{color:var(--muted);text-decoration:none;padding:.45rem .6rem;border-radius:6px}
+.sidebar .nav a:hover{background:#f7f7f7;color:var(--accent)}
+
+/* Header toggle */
+/* Floating hamburger placed at the left edge for small screens */
+.sidebar-toggle{background:transparent;border:0;font-size:1.3rem;cursor:pointer;padding:.45rem .6rem;margin:0;display:inline-flex;align-items:center;justify-content:center}
+.sidebar-toggle:focus{outline:2px solid rgba(107,79,63,0.2);border-radius:6px}
+.site-header .container{display:flex;align-items:center}
+
+/* When sidebar is visible on larger screens, push content */
+@media(min-width:900px){
+	/* On desktop the sidebar is visible when it has the .open class. */
+	/* Use body.sidebar-open to apply layout shifts so toggling works. */
+	body.sidebar-open{padding-left:220px}
+	.site-header{position:fixed;left:0;right:0;top:0;z-index:95;transition:left .28s}
+	body.sidebar-open .site-header{left:220px}
+	.site-footer{position:relative;left:0}
+	/* Keep hamburger visible on desktop so user can close the sidebar */
+	.sidebar-toggle{display:inline-flex}
+	/* No overlay on desktop */
+	body.sidebar-open::before{display:none}
+}
+
+/* Sidebar as drawer for small screens */
+@media(max-width:899px){
+	.sidebar{width:84%;max-width:320px}
+	/* Keep header fixed on small screens as well */
+	.site-header{position:fixed;left:0;right:0;top:0;z-index:120}
+	/* Floating hamburger fixed to left-top */
+	.sidebar-toggle{position:fixed;left:12px;top:12px;z-index:70;border-radius:8px;background:#fff;border:1px solid #eee;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+	/* When drawer open, prevent body scroll and show overlay */
+	body.sidebar-open{overflow:hidden}
+	body.sidebar-open::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,0.36);z-index:60}
+}
+
+/* Small enhancement: ensure overlay appears under the sidebar but above content */
+.sidebar{z-index:70}
+.sidebar.open{z-index:71}
