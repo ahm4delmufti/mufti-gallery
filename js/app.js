@@ -11,35 +11,46 @@ async function fetchProducts(){
 async function renderFeatured(){
   const container = document.getElementById('featured-grid');
   if(!container) return;
-  const products = await fetchProducts();
-  const featured = products.slice(0,4);
-  container.innerHTML = featured.map(product=>`<article class="card">
-    <img src="${product.image}" alt="${product.title}">
-    <div class="card-body">
-      <h4 class="card-title">${product.title}</h4>
-      <p class="small">${product.description}</p>
-      <div style="margin-top:.5rem">
-        <button class="btn" onclick="openModal(${product.id})">Details</button>
+  try {
+    const products = await fetchProducts();
+    const featured = products.slice(0,4);
+    container.innerHTML = featured.map(product=>`<article class="card">
+      <img src="${product.image}" alt="${product.title}">
+      <div class="card-body">
+        <h4 class="card-title">${product.title}</h4>
+        <p class="small">${product.description}</p>
+        <div style="margin-top:.5rem">
+          <button class="btn" onclick="openModal(${product.id})">Details</button>
+        </div>
       </div>
-    </div>
-  </article>`).join('');
+    </article>`).join('');
+    observeNewElements('#featured-grid');
+  } catch (err) {
+    console.error("Featured failed:", err);
+  }
 }
 
 // Render products grid on shop
 async function renderProductsGrid(){
   const container = document.getElementById('products-grid');
   if(!container) return;
-  const products = await fetchProducts();
-  container.innerHTML = products.map(product=>`<article class="card" id="p${product.id}">
-    <img src="${product.image}" alt="${product.title}">
-    <div class="card-body">
-      <h4 class="card-title">${product.title}</h4>
-      <p class="small">${product.description}</p>
-      <div style="margin-top:.5rem">
-        <button class="btn" onclick="openModal(${product.id})">Details</button>
+  try {
+    const products = await fetchProducts();
+    container.innerHTML = products.map(product=>`<article class="card" id="p${product.id}">
+      <img src="${product.image}" alt="${product.title}">
+      <div class="card-body">
+        <h4 class="card-title">${product.title}</h4>
+        <p class="small">${product.description}</p>
+        <div style="margin-top:.5rem">
+          <button class="btn" onclick="openModal(${product.id})">Details</button>
+        </div>
       </div>
-    </div>
-  </article>`).join('');
+    </article>`).join('');
+    observeNewElements('#products-grid');
+  } catch (err) {
+    console.error("Grid failed:", err);
+    container.innerHTML = `<p>Error loading products. Please try refreshing.</p>`;
+  }
 }
 
 // Modal
@@ -239,9 +250,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 // Reveal animations using IntersectionObserver
 function setupRevealAnimations(){
-  const targets = document.querySelectorAll('.card, .featured, .about, .contact, .shop-top, .grid');
-  if(!targets.length) return;
-  targets.forEach(target => target.classList.add('reveal-hidden'));
+  // Only target static elements initially
+  const staticTargets = document.querySelectorAll('.featured, .about, .contact, .shop-top');
+  
   const observer = new IntersectionObserver((entries, intersectionObserver)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
@@ -250,8 +261,29 @@ function setupRevealAnimations(){
         intersectionObserver.unobserve(entry.target);
       }
     });
-  },{threshold:0.12});
-  targets.forEach(target => observer.observe(target));
+  },{threshold:0.1, rootMargin: '0px 0px -50px 0px'});
+
+  staticTargets.forEach(target => {
+    target.classList.add('reveal-hidden');
+    observer.observe(target);
+  });
+
+  // Export observer for dynamic content
+  window.revealObserver = observer;
+}
+
+// Function to observe newly added elements
+function observeNewElements(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container || !window.revealObserver) return;
+  
+  const items = container.querySelectorAll('.card');
+  items.forEach(item => {
+    if (!item.classList.contains('reveal')) {
+      item.classList.add('reveal-hidden');
+      window.revealObserver.observe(item);
+    }
+  });
 }
 
 // Scroll-to-top behavior

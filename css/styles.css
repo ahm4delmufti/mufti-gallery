@@ -54,9 +54,15 @@ body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;color:#222;background:
 .reveal-hidden{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .55s ease}
 .reveal{opacity:1;transform:none}
 
+/* Fallback for no-js or slow reveal */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden { opacity: 1; transform: none; }
+}
+
 .hero h2{animation:heroFloat 6s ease-in-out infinite}
 
-.card{transition:transform .22s ease,box-shadow .22s ease}
+.card{transition:transform .22s ease,box-shadow .22s ease; opacity: 1;} /* Ensure card is visible by default */
+.card.reveal-hidden { opacity: 0; } /* Only hide if JS specifically adds the class */
 .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 30px rgba(34,34,34,0.08)}
 
 /* Cart styles removed — site is display-only */
