@@ -78,180 +78,112 @@ function closeModal(){
 
 // Cart removed — no client-side cart functions required
 
-// Hooks
-document.addEventListener('DOMContentLoaded', ()=>{
-  renderFeatured();
-  renderProductsGrid();
-  const modalClose = document.getElementById('modal-close');
-  if(modalClose) modalClose.addEventListener('click', closeModal);
-  const modal = document.getElementById('product-modal');
-  if(modal) modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
-  
-  // Sidebar toggle (for responsive left navigation)
-  // Initialize sidebar behavior when elements are present. Use a MutationObserver
-  // to detect injected layout if it appears after this script runs.
-  function initSidebar(){
-    if(window.__mufti_sidebar_inited) return;
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebar = document.getElementById('site-sidebar');
-    if(!sidebarToggle || !sidebar) return;
+// Sidebar logic
+function initSidebar(){
+  if(window.__mufti_sidebar_inited) return;
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('site-sidebar');
+  if(!sidebarToggle || !sidebar) return;
 
-    window.__mufti_sidebar_inited = true;
+  window.__mufti_sidebar_inited = true;
 
-    function closeSidebar(){
-      sidebar.classList.remove('open');
-      sidebar.setAttribute('aria-hidden','true');
-      sidebarToggle.setAttribute('aria-expanded','false');
-      document.body.classList.remove('sidebar-open');
-    }
-    function openSidebar(){
-      sidebar.classList.add('open');
-      sidebar.setAttribute('aria-hidden','false');
-      sidebarToggle.setAttribute('aria-expanded','true');
-      document.body.classList.add('sidebar-open');
-    }
-
-    sidebarToggle.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      const isOpen = sidebar.classList.toggle('open');
-      sidebar.setAttribute('aria-hidden', String(!isOpen));
-      sidebarToggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.classList.toggle('sidebar-open', isOpen);
-    });
-
-    // Close sidebar when clicking outside on small screens
-    document.addEventListener('click', (e)=>{
-      if(window.innerWidth > 900) return;
-      if(!sidebar.classList.contains('open')) return;
-      const target = e.target;
-      if(target === sidebar || sidebar.contains(target) || target === sidebarToggle) return;
-      closeSidebar();
-    });
-    // Close on Esc
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSidebar(); });
+  function closeSidebar(){
+    sidebar.classList.remove('open');
+    sidebar.setAttribute('aria-hidden','true');
+    sidebarToggle.setAttribute('aria-expanded','false');
+    document.body.classList.remove('sidebar-open');
   }
 
-  // Try to init immediately (if layout already injected)
-  initSidebar();
-  // If not initialized yet, observe DOM for injected layout elements
-  if(!window.__mufti_sidebar_inited){
-    const mutObserver = new MutationObserver((records, mutationObserver)=>{
-      if(document.getElementById('site-sidebar') && document.getElementById('sidebar-toggle')){
-        initSidebar();
-        mutationObserver.disconnect();
+  sidebarToggle.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const isOpen = sidebar.classList.toggle('open');
+    sidebar.setAttribute('aria-hidden', String(!isOpen));
+    sidebarToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('sidebar-open', isOpen);
+  });
+
+  document.addEventListener('click', (e)=>{
+    if(window.innerWidth > 900) return;
+    if(!sidebar.classList.contains('open')) return;
+    const target = e.target;
+    if(target === sidebar || sidebar.contains(target) || target === sidebarToggle) return;
+    closeSidebar();
+  });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSidebar(); });
+}
+
+// Navigation & ScrollSpy
+function initNavigation(){
+  function getNavLinks(){ return Array.from(document.querySelectorAll('.nav a[href^="#"]')); }
+  function headerHeight(){
+    const headerEl = document.querySelector('.site-header');
+    return headerEl ? headerEl.getBoundingClientRect().height : 0;
+  }
+  function scrollToSection(el){
+    if(!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight() - 8;
+    window.scrollTo({top,behavior:'smooth'});
+  }
+
+  let links = getNavLinks();
+  const attach = () => {
+    links = getNavLinks();
+    const sections = links.map(l=> document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    links.forEach(link => link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if(!href || !href.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if(!target) return;
+      event.preventDefault();
+      const sidebar = document.getElementById('site-sidebar');
+      if(sidebar && sidebar.classList.contains('open')){
+        sidebar.classList.remove('open');
+        document.body.classList.remove('sidebar-open');
       }
-    });
-    mutObserver.observe(document.documentElement || document.body, {childList:true,subtree:true});
-  }
-  // Setup reveal-on-scroll animations
-  setupRevealAnimations();
-  // Initialize navigation handlers and ScrollSpy
-  (function initNavigation(){
-    function getNavLinks(){
-      return Array.from(document.querySelectorAll('.nav a[href^="#"]'));
-    }
+      scrollToSection(target);
+    }));
 
-    function headerHeight(){
-      const headerEl = document.querySelector('.site-header');
-      return headerEl ? headerEl.getBoundingClientRect().height : 0;
-    }
-
-    function scrollToSection(el){
-      if(!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight() - 8;
-      window.scrollTo({top,behavior:'smooth'});
-    }
-
-    let links = getNavLinks();
-    if(!links.length){
-      // wait for injected layout
-      const mutObserverForLinks = new MutationObserver((records, mutationObserver)=>{
-        links = getNavLinks();
-        if(links.length){
-          mutationObserver.disconnect();
-          attach();
-        }
-      });
-      mutObserverForLinks.observe(document.documentElement || document.body, {childList:true,subtree:true});
-    } else attach();
-
-    function attach(){
-      links = getNavLinks();
-      const sections = links.map(l=> document.querySelector(l.getAttribute('href'))).filter(Boolean);
-
-      links.forEach(link => link.addEventListener('click', (event) => {
-        const href = link.getAttribute('href');
-        if(!href || !href.startsWith('#')) return;
-        const target = document.querySelector(href);
-        if(!target) return;
-        event.preventDefault();
-        // close sidebar if open (mobile or desktop)
-        const sidebar = document.getElementById('site-sidebar');
-        const toggle = document.getElementById('sidebar-toggle');
-        if(sidebar && sidebar.classList.contains('open')){
-          sidebar.classList.remove('open');
-          sidebar.setAttribute('aria-hidden','true');
-          if(toggle) toggle.setAttribute('aria-expanded','false');
-          document.body.classList.remove('sidebar-open');
-        }
-        scrollToSection(target);
-      }));
-
-      // ScrollSpy: update active link
-      let ticking = false;
-      function onScroll(){
-        if(ticking) return; ticking = true;
-        requestAnimationFrame(()=>{
-          const offset = window.scrollY + headerHeight() + 12;
-          let current = sections[0];
-          for(const section of sections){ if(section.offsetTop <= offset) current = section; }
-          links.forEach(link =>{
-            const target = document.querySelector(link.getAttribute('href'));
-            link.classList.toggle('active', target === current);
-          });
-          ticking = false;
+    let ticking = false;
+    function onScroll(){
+      if(ticking) return; ticking = true;
+      requestAnimationFrame(()=>{
+        const offset = window.scrollY + headerHeight() + 12;
+        let current = sections[0];
+        for(const section of sections){ if(section.offsetTop <= offset) current = section; }
+        links.forEach(link =>{
+          const target = document.querySelector(link.getAttribute('href'));
+          link.classList.toggle('active', target === current);
         });
-      }
-
-      document.addEventListener('scroll', onScroll, {passive:true});
-      // initial
-      onScroll();
+        ticking = false;
+      });
     }
-  })();
-  // Ensure sidebar default state matches viewport (open on desktop)
-  (function syncSidebarState(){
-    const sidebar = document.getElementById('site-sidebar');
-    const toggle = document.getElementById('sidebar-toggle');
-    if(!sidebar || !toggle) return;
-    const setOpen = (open)=>{
-      sidebar.classList.toggle('open', open);
-      sidebar.setAttribute('aria-hidden', String(!open));
-      toggle.setAttribute('aria-expanded', String(open));
-      document.body.classList.toggle('sidebar-open', open);
-    };
-    // Initial state
-    setOpen(window.innerWidth >= 900);
-    // Keep in sync when resizing across breakpoint
-    let lastIsDesktop = window.innerWidth >= 900;
-    window.addEventListener('resize', ()=>{
-      const isDesktop = window.innerWidth >= 900;
-      if(isDesktop !== lastIsDesktop){
-        // On entering desktop, open sidebar; on leaving desktop, close it
-        setOpen(isDesktop);
-        lastIsDesktop = isDesktop;
-      }
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  };
+
+  if(!links.length){
+    const obs = new MutationObserver(()=>{
+      if(getNavLinks().length){ obs.disconnect(); attach(); }
     });
-  })();
-  // Scroll-to-top button
-  setupScrollTop();
-  // Hero slideshow (index page)
-  setupHeroSlideshow();
-});
+    obs.observe(document.body, {childList:true,subtree:true});
+  } else attach();
+}
+
+function syncSidebarState(){
+  const sidebar = document.getElementById('site-sidebar');
+  const toggle = document.getElementById('sidebar-toggle');
+  if(!sidebar || !toggle) return;
+  const setOpen = (open)=>{
+    sidebar.classList.toggle('open', open);
+    document.body.classList.toggle('sidebar-open', open);
+  };
+  setOpen(window.innerWidth >= 900);
+  window.addEventListener('resize', ()=>{ setOpen(window.innerWidth >= 900); });
+}
 
 // Reveal animations using IntersectionObserver
 function setupRevealAnimations(){
-  // Only target static elements initially
-  const staticTargets = document.querySelectorAll('.featured, .about, .contact, .shop-top');
+  const staticTargets = document.querySelectorAll('.featured, .about, .contact, .shop-top, .reveal-stagger');
   
   const observer = new IntersectionObserver((entries, intersectionObserver)=>{
     entries.forEach(entry=>{
@@ -261,18 +193,19 @@ function setupRevealAnimations(){
         intersectionObserver.unobserve(entry.target);
       }
     });
-  },{threshold:0.1, rootMargin: '0px 0px -50px 0px'});
+  },{threshold:0.1, rootMargin: '0px 0px -100px 0px'});
 
   staticTargets.forEach(target => {
-    target.classList.add('reveal-hidden');
+    if (!target.classList.contains('reveal-stagger')) {
+      target.classList.add('reveal-hidden');
+    }
     observer.observe(target);
   });
 
-  // Export observer for dynamic content
   window.revealObserver = observer;
 }
 
-// Function to observe newly added elements
+// Function to observe newly added elements (for products)
 function observeNewElements(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container || !window.revealObserver) return;
@@ -282,6 +215,40 @@ function observeNewElements(containerSelector) {
     if (!item.classList.contains('reveal')) {
       item.classList.add('reveal-hidden');
       window.revealObserver.observe(item);
+    }
+  });
+}
+
+// Magnetic Buttons
+function setupMagneticButtons() {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+// Parallax Hero
+function setupParallax() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const slides = hero.querySelector('.hero-slides');
+    if (slides) {
+      slides.style.transform = `translateY(${scrolled * 0.4}px)`;
+    }
+    const container = hero.querySelector('.container');
+    if (container) {
+      container.style.transform = `translateY(${scrolled * -0.1}px)`;
+      container.style.opacity = 1 - (scrolled / 500);
     }
   });
 }
@@ -309,3 +276,36 @@ function setupHeroSlideshow(){
     slides[currentIndex].classList.add('active');
   }, 6000);
 }
+
+// Hooks
+document.addEventListener('DOMContentLoaded', ()=>{
+  renderFeatured();
+  renderProductsGrid();
+  
+  const modalClose = document.getElementById('modal-close');
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  const modal = document.getElementById('product-modal');
+  if(modal) modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+  
+  // Sidebar toggle
+  initSidebar();
+  if(!window.__mufti_sidebar_inited){
+    const mutObserver = new MutationObserver((records, mutationObserver)=>{
+      if(document.getElementById('site-sidebar') && document.getElementById('sidebar-toggle')){
+        initSidebar();
+        mutationObserver.disconnect();
+      }
+    });
+    mutObserver.observe(document.documentElement || document.body, {childList:true,subtree:true});
+  }
+
+  setupRevealAnimations();
+  setupMagneticButtons();
+  setupParallax();
+  setupScrollTop();
+  setupHeroSlideshow();
+
+  // Navigation & ScrollSpy
+  initNavigation();
+  syncSidebarState();
+});

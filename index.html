@@ -1,80 +1,126 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mufti Gallery — Antiques & Curios</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <div id="site-header"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mufti Gallery — Antiques & Curios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container">
-        <h2>Authentic Antiques & Timeless Curios</h2>
-        <p>Discover hand-picked antiques and decorative pieces for collectors and interior lovers.</p>
-        <a class="btn" href="#shop">Browse the Collection</a>
+    <main>
+      <section id="home" class="hero">
+        <div class="container reveal-stagger">
+          <h2>Authentic Antiques & Timeless Curios</h2>
+          <p>
+            Discover hand-picked antiques and decorative pieces for collectors
+            and interior lovers.
+          </p>
+          <a class="btn" href="#shop">Browse the Collection</a>
+        </div>
+        <div class="hero-slides" aria-hidden="true">
+          <img
+            src="images/Sahara by tariq elshebly.jpg"
+            alt="Sahara tapestry background"
+          />
+          <img
+            src="images/targi man in desert by tariq elshebly.jpg"
+            alt="Targi desert scene"
+          />
+          <img
+            src="images/targi warrior on his camel by tariq elshebly.jpg"
+            alt="Targi warrior on camel"
+          />
+          <img
+            src="images/two targi men talking by tariq elshebly.jpg"
+            alt="Two Targi men talking"
+          />
+          <img
+            src="images/al-fezzani by tariq elshebly.jpg"
+            alt="Al-Fezzani lantern"
+          />
+          <img src="images/store.jpeg" alt="Inside Mufti Gallery" />
+        </div>
+      </section>
+
+      <section id="about" class="container about reveal-stagger">
+        <h3>About Mufti Gallery</h3>
+        <p>
+          Established in 1953 by Ahmed Elmufti, Mufti Gallery began as a small
+          family shop focused on local antiques and handcrafted pieces. The
+          gallery continues to operate today under the management of Ibrahim
+          Elmufti. Over the decades we have curated a wide variety of antiques,
+          souvenirs, handcrafts, and vintage goods sourced locally and
+          regionally.
+        </p>
+
+        <h4>History</h4>
+        <p>
+          From our modest beginnings in 1953 to the present day, Mufti Gallery
+          has remained dedicated to preserving and sharing unique pieces with
+          collectors and interior lovers alike. Each item is inspected and
+          described, and many items come with a story that connects them to the
+          past.
+        </p>
+      </section>
+
+      <section id="shop" class="shop-top container">
+        <h2>Shop the Collection</h2>
+        <p>Click an item to view details.</p>
+      </section>
+
+      <section id="products" class="container">
+        <div id="products-grid" class="grid"></div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contact</h3>
+        <p>For inquiries or custom requests contact us:</p>
+        <ul>
+          <li>Phone: +218 92 376 3407</li>
+          <li>Phone: +218 91 376 3407</li>
+          <li>
+            Email:
+            <a href="mailto:muftigalleries@gmail.com"
+              >muftigalleries@gmail.com</a
+            >
+          </li>
+        </ul>
+        <section class="social">
+          <h3>Follow Us</h3>
+
+          <a
+            href="https://www.instagram.com/muftiforantiques?igsh=cmhycm5sdHBqOHZo"
+            target="_blank"
+            rel="noopener"
+            ><img src="images/insta.png" alt="Instagram" height="30" width="30"
+          /></a>
+
+          <a
+            href="https://www.facebook.com/share/1C59nb5EHW/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener"
+            ><img
+              src="images/facebook.png"
+              alt="Facebook"
+              height="30"
+              width="30"
+          /></a>
+        </section>
+      </section>
+    </main>
+
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close">×</button>
+        <div id="modal-body"></div>
       </div>
-      <div class="hero-slides" aria-hidden="true">
-        <img src="images/Sahara by tariq elshebly.jpg" alt="Sahara tapestry background">
-        <img src="images/targi man in desert by tariq elshebly.jpg" alt="Targi desert scene">
-        <img src="images/targi warrior on his camel by tariq elshebly.jpg" alt="Targi warrior on camel">
-        <img src="images/two targi men talking by tariq elshebly.jpg" alt="Two Targi men talking">
-        <img src="images/al-fezzani by tariq elshebly.jpg" alt="Al-Fezzani lantern">
-        <img src="images/store.jpeg" alt="Al-Mahari copper bowl">
-      </div>
-    </section>
-
-    <section id="about" class="container about">
-      <h3>About Mufti Gallery</h3>
-      <p>Established in 1953 by Ahmed Elmufti, Mufti Gallery began as a small family shop focused on local antiques and handcrafted pieces. The gallery continues to operate today under the management of Ibrahim Elmufti. Over the decades we have curated a wide variety of antiques, souvenirs, handcrafts, and vintage goods sourced locally and regionally.</p>
-
-      <h4>History</h4>
-      <p>From our modest beginnings in 1953 to the present day, Mufti Gallery has remained dedicated to preserving and sharing unique pieces with collectors and interior lovers alike. Each item is inspected and described, and many items come with a story that connects them to the past.</p>
-    </section>
-
-    <section id="shop" class="shop-top container">
-      <h2>Shop the Collection</h2>
-      <p>Click an item to view details.</p>
-    </section>
-
-    <section id="products" class="container">
-      <div id="products-grid" class="grid"></div>
-    </section>
-
-    
-
-    <section id="contact" class="container contact">
-      <h3>Contact</h3>
-      <p>For inquiries or custom requests contact us:</p>
-      <ul>
-        <li>Phone: +218 92 376 3407</li>
-        <li>Phone: +218 91 376 3407</li>
-        <li>Email: <a href="mailto:muftigalleries@gmail.com">muftigalleries@gmail.com</a></li>
-      </ul>
-          <section class="social">
-      <h3>Follow Us</h3>
-      
-        <a href="https://www.instagram.com/muftiforantiques?igsh=cmhycm5sdHBqOHZo" target="_blank" rel="noopener"><img src="images/insta.png" alt="Instagram" height="30" width="30"></a>
-       
-        <a href="https://www.facebook.com/share/1C59nb5EHW/?mibextid=wwXIfr" target="_blank" rel="noopener"><img src="images/facebook.png" alt="Facebook" height="30" width="30"></a>
-      
-    </section>
-    </section>
-    
-  </main>
-
-  <div id="product-modal" class="modal hidden">
-    <div class="modal-content">
-      <button id="modal-close" class="modal-close">×</button>
-      <div id="modal-body"></div>
     </div>
-  </div>
 
-  <div id="site-footer"></div>
+    <div id="site-footer"></div>
 
-  <script src="js/include-layout.js"></script>
-  <script src="js/app.js"></script>
-</body>
+    <script src="js/include-layout.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
