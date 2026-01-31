@@ -12,6 +12,19 @@ window.selectLang = function(lang) {
   document.getElementById('custom-lang-dropdown').classList.remove('open');
 };
 
+// Theme Logic
+window.toggleTheme = function() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('site-theme', newTheme);
+};
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('site-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
 document.addEventListener('click', (e) => {
   const dd = document.getElementById('custom-lang-dropdown');
   if (dd && !dd.contains(e.target) && e.target.id !== 'lang-toggle-btn') { // Added check for toggle button
@@ -47,8 +60,8 @@ function applyTranslations() {
   // Sync custom dropdown flag if it exists
   const flagImg = document.getElementById('current-flag');
   if (flagImg) {
-    const flagCodes = { en: 'us', ar: 'ly', it: 'it', fr: 'fr', es: 'es' };
-    flagImg.src = `https://flagcdn.com/w40/${flagCodes[currentLang]}.png`;
+    const flagCodes = { en: 'us', ar: 'ly', it: 'it', fr: 'fr', es: 'es', zh: 'cn' };
+    flagImg.src = `https://flagcdn.com/w40/${flagCodes[currentLang] || 'us'}.png`;
   }
 
   // Trigger content refreshes
@@ -141,18 +154,30 @@ function initSidebar(){
   if(window.__mufti_sidebar_inited) return;
   const toggle = document.getElementById('sidebar-toggle');
   const sidebar = document.getElementById('site-sidebar');
+  const closeBtn = document.getElementById('sidebar-close');
   if(!toggle || !sidebar) return;
   window.__mufti_sidebar_inited = true;
+
+  const toggleSidebar = (force) => {
+    const isOpen = (typeof force === 'boolean') ? force : !sidebar.classList.contains('open');
+    sidebar.classList.toggle('open', isOpen);
+    document.body.classList.toggle('sidebar-open', isOpen);
+    sidebar.setAttribute('aria-hidden', !isOpen);
+  };
+
   toggle.addEventListener('click', (e)=>{
     e.stopPropagation();
-    const isOpen = sidebar.classList.toggle('open');
-    document.body.classList.toggle('sidebar-open', isOpen);
+    toggleSidebar();
   });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => toggleSidebar(false));
+  }
+
   document.addEventListener('click', (e)=>{
     if(window.innerWidth > 900 || !sidebar.classList.contains('open')) return;
     if(!sidebar.contains(e.target) && e.target !== toggle) {
-      sidebar.classList.remove('open');
-      document.body.classList.remove('sidebar-open');
+      toggleSidebar(false);
     }
   });
 }
@@ -257,9 +282,12 @@ function setupHeroSlideshow(){
   }, 6000);
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  loadTranslations();
+document.addEventListener('DOMContentLoaded', async () => {
+  initTheme();
+  
+  await loadTranslations();
   initSidebar();
+  
   const mut = new MutationObserver(()=>{ if(document.getElementById('site-sidebar')){ initSidebar(); syncSidebarState(); mut.disconnect(); } });
   mut.observe(document.body, {childList:true,subtree:true});
   
@@ -275,11 +303,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   setupHeroSlideshow();
   initNavigation();
 
-  // Initial render  // Ensure products render after translations are ready
+  // Initial render
   renderFeatured();
   renderProductsGrid();
-
-  // Sync dropdown if it exists
-  const select = document.getElementById('lang-select');
-  if (select) select.value = currentLang;
 });

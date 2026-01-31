@@ -103,5 +103,26 @@
     "details": "Detalles",
     "language": "Idioma",
     "featured_title": "Artículos Destacados"
+  },
+  "zh": {
+    "home": "首页",
+    "shop": "商店",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "hero_title": "真正的古董与永恒的珍奇",
+    "hero_desc": "为收藏家和室内设计爱好者发现精心挑选的古董和装饰品。",
+    "browse": "浏览收藏",
+    "about_title": "关于穆夫提画廊",
+    "about_p1": "穆夫提画廊（Mufti Gallery）由艾哈迈德·穆夫提（Ahmed Elmufti）于1953年创立，最初是一家专注于当地古董和手工制品的家族小店。如今，画廊在易卜拉欣·穆夫提（Ibrahim Elmufti）的管理下继续运营。几十年来，我们精心策划了各种各样的古董、纪念品、手工艺品和复古商品，这些商品均来自当地和区域。",
+    "about_history": "历史",
+    "about_p2": "从1953年谦卑的开始到今天，穆夫提画廊一直致力于保护并与收藏家及室内装饰爱好者分享独特的作品。每件物品都经过检查和描述，许多物品都带有一个将其与过去联系起来的故事。",
+    "shop_title": "商店收藏",
+    "shop_desc": "点击物品查看详情。",
+    "contact_title": "联系方式",
+    "contact_desc": "如需查询或定制要求，请联系我们：",
+    "follow_us": "关注我们",
+    "details": "详情",
+    "language": "语言",
+    "featured_title": "精选物品"
   }
 }
