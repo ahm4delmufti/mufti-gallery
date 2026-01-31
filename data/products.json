@@ -4,299 +4,419 @@
     "title": "Al-Fezzani Lantern",
     "title_ar": "فانوس الفزاني",
     "title_it": "Lanterna Al-Fezzani",
+    "title_fr": "Lanterne Al-Fezzani",
+    "title_es": "Linterna Al-Fezzani",
     "image": "images/al-fezzani by tariq elshebly.jpg",
     "description": "A decorative brass lantern inspired by Fezzan craftsmanship, with a warm patina perfect for ambient lighting.",
     "description_ar": "فانوس نحاسي مزخرف مستوحى من حرفية منطقة فزان، مع طبقة عتيقة دافئة مثالية للإضاءة المحيطة.",
-    "description_it": "Una lanterna decorativa in ottone ispirata all'artigianato del Fezzan, con una calda patina perfetta per l'illuminazione d'ambiente."
+    "description_it": "Una lanterna decorativa in ottone ispirata all'artigianato del Fezzan, con una calda patina perfetta per l'illuminazione d'ambiente.",
+    "description_fr": "Une lanterne décorative en laiton inspirée de l'artisanat du Fezzan, avec une patine chaleureuse parfaite pour un éclairage d'ambiance.",
+    "description_es": "Una linterna decorativa de latón inspirada en la artesanía de Fezzan, con una pátina cálida perfecta para la iluminación ambiental."
   },
   {
     "id": 2,
     "title": "Al-Mahari Copper Bowl",
     "title_ar": "وعاء النحاس المهاري",
     "title_it": "Ciotola di rame Al-Mahari",
+    "title_fr": "Bol en cuivre Al-Mahari",
+    "title_es": "Cuenco de cobre Al-Mahari",
     "image": "images/al-mahari by tariq elshebly.jpg",
     "description": "A finely engraved copper bowl traditionally used for serving — a beautiful tabletop accent with historic character.",
     "description_ar": "وعاء نحاسي منقوش بدقة يستخدم تقليدياً للتقديم - لمسة جمالية للطاولة ذات طابع تاريخي.",
-    "description_it": "Una ciotola di rame finemente incisa tradizionalmente usata per servire: un bellissimo accento da tavola con carattere storico."
+    "description_it": "Una ciotola di rame finemente incisa tradizionalmente usata per servire: un bellissimo accento da tavola con carattere storico.",
+    "description_fr": "Un bol en cuivre finement gravé traditionnellement utilisé pour le service - une belle touche décorative avec un caractère historique.",
+    "description_es": "Un cuenco de cobre finamente grabado utilizado tradicionalmente para servir: un hermoso acento de mesa con carácter histórico."
   },
   {
     "id": 3,
     "title": "Al-Mulsam Ceramic Vase",
     "title_ar": "مزهرية الخزف الملصم",
     "title_it": "Vaso in ceramica Al-Mulsam",
+    "title_fr": "Vase en céramique Al-Mulsam",
+    "title_es": "Jarrón de cerámica Al-Mulsam",
     "image": "images/al-mulsam by tariq elshebly.jpg",
     "description": "A glazed ceramic vase decorated with regional motifs; ideal for dried flowers or display on a shelf.",
     "description_ar": "مزهرية خزفية مزججة مزينة بزخارف إقليمية؛ مثالية للزهور المجففة أو العرض على الرف.",
-    "description_it": "Un vaso in ceramica smaltata decorato con motivi regionali; ideale per fiori secchi o da esporre su una mensola."
+    "description_it": "Un vaso in ceramica smaltata decorato con motivi regionali; ideale per fiori secchi o da esporre su una mensola.",
+    "description_fr": "Un vase en céramique émaillée décoré de motifs régionaux ; idéal pour les fleurs séchées ou l'exposition sur une étagère.",
+    "description_es": "Un jarrón de cerámica vidriada decorado con motivos regionales; ideal para flores secas o para exhibir en un estante."
   },
   {
     "id": 4,
     "title": "Atri Engraved Plate",
     "title_ar": "طبق أتري المنقوش",
     "title_it": "Piatto inciso Atri",
+    "title_fr": "Assiette gravée Atri",
+    "title_es": "Plato grabado Atri",
     "image": "images/Atri by tariq elshebly.jpg",
     "description": "An ornate engraved plate attributed to the Atri style, suitable for wall display or tabletop decoration.",
     "description_ar": "طبق منقوش مزخرف منسوب إلى طراز أرتي، يصلح للعرض على الحائط أو لتزيين الطاولة.",
-    "description_it": "Un piatto inciso e decorato attribuito allo stile Atri, adatto per l'esposizione a parete o come decorazione da tavola."
+    "description_it": "Un piatto inciso e decorato attribuito allo stile Atri, adatto per l'esposizione a parete o come decorazione da tavola.",
+    "description_fr": "Une assiette gravée ornée attribuée au style Atri, adaptée à l'affichage mural ou à la décoration de table.",
+    "description_es": "Un plato grabado ornamentado atribuido al estilo Atri, adecuado para exhibir en la pared o como decoración de mesa."
   },
   {
     "id": 5,
     "title": "Omar al-Mokhtar Print",
     "title_ar": "لوحة عمر المختار",
     "title_it": "Stampa di Omar al-Mokhtar",
+    "title_fr": "Impression d'Omar al-Mokhtar",
+    "title_es": "Impresión de Omar al-Mokhtar",
     "image": "images/omar elmokhtar by tariq elshebly.jpg",
     "description": "A striking portrait print of Omar al-Mokhtar, a powerful historic image for collectors and history enthusiasts.",
     "description_ar": "لوحة بورتريه لافتة لعمر المختار، صورة تاريخية قوية للهواة وعشاق التاريخ.",
-    "description_it": "Una suggestiva stampa ritratto di Omar al-Mokhtar, una potente immagine storica per collezionisti e amanti della storia."
+    "description_it": "Una suggestiva stampa ritratto di Omar al-Mokhtar, una potente immagine storica per collezionisti e amanti della storia.",
+    "description_fr": "Une impression de portrait saisissante d'Omar al-Mokhtar, une image historique puissante pour les collectionneurs et passionnés d'histoire.",
+    "description_es": "Una impactante impresión de retrato de Omar al-Mokhtar, una poderosa imagen histórica para coleccionistas y entusiastas de la historia."
   },
   {
     "id": 6,
     "title": "Sahara Tapestry",
     "title_ar": "منسوجة الصحراء",
     "title_it": "Arazzo del Sahara",
+    "title_fr": "Tapisserie du Sahara",
+    "title_es": "Tapiz del Sahara",
     "image": "images/Sahara by tariq elshebly.jpg",
     "description": "A richly colored tapestry capturing Saharan patterns — excellent as a wall hanging or decorative throw.",
     "description_ar": "منسوجة غنية بالألوان تجسد الأنماط الصحراوية - ممتازة كتعليق على الحائط أو غطاء مزخرف.",
-    "description_it": "Un arazzo dai colori intensi che cattura i motivi sahariani - eccellente come decorazione da parete o coperta decorativa."
+    "description_it": "Un arazzo dai colori intensi che cattura i motivi sahariani - eccellente come decorazione da parete o coperta decorativa.",
+    "description_fr": "Une tapisserie aux couleurs riches capturant les motifs sahariens - excellente comme tenture murale ou jeté décoratif.",
+    "description_es": "Un tapiz de colores intensos que captura los patrones saharianos, excelente como colgante de pared o manta decorativa."
   },
   {
     "id": 7,
     "title": "Targa Painted Tile",
     "title_ar": "بلاط تارجا الملون",
     "title_it": "Mattonella dipinta Targa",
+    "title_fr": "Carreau peint Targa",
+    "title_es": "Azulejo pintado Targa",
     "image": "images/Targa by tariq elshebly.jpg",
     "description": "A hand-painted tile featuring Targa motifs; great individually or as part of a tile arrangement.",
     "description_ar": "بلاط مرسوم يدوياً يتميز بزخارف تارجا؛ رائع بمفرده أو كجزء من ترتيب البلاط.",
-    "description_it": "Una piastrella dipinta a mano con motivi Targa; ottima singolarmente o come parte di una composizione di piastrelle."
+    "description_it": "Una piastrella dipinta a mano con motivi Targa; ottima singolarmente o come parte di una composizione di piastrelle.",
+    "description_fr": "Un carreau peint à la main présentant des motifs Targa ; idéal individuellement ou dans le cadre d'un agencement de carreaux.",
+    "description_es": "Un azulejo pintado a mano con motivos Targa; genial individualmente o como parte de una disposición de azulejos."
   },
   {
     "id": 8,
     "title": "Targi Desert Print",
     "title_ar": "لوحة رجل الطوارق في الصحراء",
     "title_it": "Stampa del deserto Targi",
+    "title_fr": "Impression du désert Targi",
+    "title_es": "Impresión del desierto Targi",
     "image": "images/targi man in desert by tariq elshebly.jpg",
     "description": "A vintage-style print depicting a man in the desert — atmospheric and full of regional charm.",
     "description_ar": "لوحة كلاسيكية تصور رجلاً في الصحراء - مليئة بالأجواء الساحرة والطابع الإقليمي.",
-    "description_it": "Una stampa in stile vintage che ritrae un uomo nel deserto: suggestiva e piena di fascino regionale."
+    "description_it": "Una stampa in stile vintage che ritrae un uomo nel deserto: suggestiva e piena di fascino regionale.",
+    "description_fr": "Une impression de style vintage représentant un homme dans le désert - atmosphérique et pleine de charme régional.",
+    "description_es": "Una impresión de estilo vintage que representa a un hombre en el desierto: atmosférica y llena de encanto regional."
   },
   {
     "id": 9,
     "title": "Targi Warrior Print",
     "title_ar": "لوحة محارب الطوارق",
     "title_it": "Stampa del guerriero Targi",
+    "title_fr": "Impression du guerrier Targi",
+    "title_es": "Impresión del guerrero Targi",
     "image": "images/targi warrior on his camel by tariq elshebly.jpg",
     "description": "A dramatic print portraying a Targi warrior; notable for its storytelling and decorative impact.",
     "description_ar": "لوحة درامية تصور محارباً من الطوارق؛ تتميز بتفاصيلها القصصية وتأثيرها الزخرفي.",
-    "description_it": "Una stampa drammatica che ritrae un guerriero Targi; nota per la sua capacità di raccontare una storia e il suo impatto decorativo."
+    "description_it": "Una stampa drammatica che ritrae un guerriero Targi; nota per la sua capacità di raccontare una storia e il suo impatto decorativo.",
+    "description_fr": "Une impression dramatique représentant un guerrier Targi ; remarquable pour sa narration et son impact décoratif.",
+    "description_es": "Una impresión dramática que retrata a un guerrero Targi; notable por su capacidad narrativa e impacto decorativo."
   },
   {
     "id": 10,
     "title": "Muthalatham Leaf",
     "title_ar": "مخطوطة ورقة الملثم",
     "title_it": "Foglio Muthalatham",
+    "title_fr": "Feuille de Muthalatham",
+    "title_es": "Hoja de Muthalatham",
     "image": "images/the muthalatham by tariq elshebly.jpg",
     "description": "A rare manuscript leaf with calligraphic detail — a unique piece for collectors of historical documents.",
     "description_ar": "ورقة مخطوطة نادرة بتفاصيل خطية - قطعة فريدة لهواة جمع الوثائق التاريخية.",
-    "description_it": "Un raro foglio di manoscritto con dettagli calligrafici: un pezzo unico per collezionisti di documenti storici."
+    "description_it": "Un raro foglio di manoscritto con dettagli calligrafici: un pezzo unico per collezionisti di documenti storici.",
+    "description_fr": "Une rare feuille de manuscrit avec des détails calligraphiques - une pièce unique pour les collectionneurs de documents historiques.",
+    "description_es": "Una rara hoja de manuscrito con detalles caligráficos: una pieza única para coleccionistas de documentos históricos."
   },
   {
     "id": 12,
     "title": "Bronze Antique Bowl",
     "title_ar": "وعاء برونزي عتيق",
     "title_it": "Ciotola antica in bronzo",
+    "title_fr": "Bol antique en bronze",
+    "title_es": "Cuenco antiguo de bronce",
     "image": "images/mini_magick20260128-31102-g9qzqe.jpg",
     "description": "A bronze bowl with intricate detailing, perfect for collectors of ancient art.",
     "description_ar": "وعاء برونزي بتفاصيل معقدة، مثالي لهواة جمع الفنون القديمة.",
-    "description_it": "Una ciotola di bronzo con dettagli intricati, perfetta per i collezionisti di arte antica."
+    "description_it": "Una ciotola di bronzo con dettagli intricati, perfetta per i collezionisti di arte antica.",
+    "description_fr": "Un bol en bronze avec des détails complexes, parfait pour les collectionneurs d'art ancien.",
+    "description_es": "Un cuenco de bronce con detalles intrincados, perfecto para los coleccionistas de arte antiguo."
   },
   {
     "id": 13,
     "title": "Bronze Antique Statue",
     "title_ar": "تمثال برونزي عتيق",
     "title_it": "Statua antica in bronzo",
+    "title_fr": "Statue antique en bronze",
+    "title_es": "Estatua antigua de bronce",
     "image": "images/mini_magick20260128-31102-koeeym.jpg",
     "description": "A bronze statue with intricate detailing, perfect for collectors of ancient art.",
     "description_ar": "تمثال برونزي بتفاصيل معقدة، مثالي لهواة جمع الفنون القديمة.",
-    "description_it": "Una statua di bronzo con dettagli intricati, perfetta per i collezionisti di arte antica."
+    "description_it": "Una statua di bronzo con dettagli intricati, perfetta per i collezionisti di arte antica.",
+    "description_fr": "Une statue en bronze avec des détails complexes, parfaite pour les collectionneurs d'art ancien.",
+    "description_es": "Una estatua de bronce con detalles intrincados, perfecta para los coleccionistas de arte antiguo."
   },
   {
     "id": 15,
     "title": "Bronze Antique Item",
     "title_ar": "قطعة برونزية عتيقة",
     "title_it": "Articolo antico in bronzo",
+    "title_fr": "Article antique en bronze",
+    "title_es": "Artículo antiguo de bronce",
     "image": "images/mini_magick20260128-31102-lnanpm.jpg",
     "description": "A bronze antique item with intricate detailing, perfect for collectors of ancient art.",
     "description_ar": "قطعة أثرية برونزية بتفاصيل معقدة، مثالية لهواة جمع الفنون القديمة.",
-    "description_it": "Un antico oggetto in bronzo con dettagli intricati, perfetto per i collezionisti di arte antica."
+    "description_it": "Un antico oggetto in bronzo con dettagli intricati, perfetto per i collezionisti di arte antica.",
+    "description_fr": "Un article en bronze antique avec des détails complexes, parfait pour les collectionneurs d'art ancien.",
+    "description_es": "Un artículo antiguo de bronce con detalles intrincados, perfecto para los coleccionistas de arte antiguo."
   },
   {
     "id": 16,
     "title": "Wooden Hand Sculptured Statue",
     "title_ar": "تمثال خشبي منحوت يدوياً",
     "title_it": "Statua in legno scolpita a mano",
+    "title_fr": "Statue sculptée à la main en bois",
+    "title_es": "Estatua de madera tallada a mano",
     "image": "images/mini_magick20260128-31585-4g60u.jpg",
     "description": "A wooden hand sculptured statue with intricate detailing, perfect for collectors of ancient art.",
     "description_ar": "تمثال خشبي منحوت يدوياً بتفاصيل معقدة، مثالي لهواة جمع الفنون القديمة.",
-    "description_it": "Una statua in legno scolpita a mano con dettagli intricati, perfetta per i collezionisti di arte antica."
+    "description_it": "Una statua in legno scolpita a mano con dettagli intricati, perfetta per i collezionisti di arte antica.",
+    "description_fr": "Une statue sculptée à la main en bois avec des détails complexes, parfaite pour les collectionneurs d'art ancien.",
+    "description_es": "Una estatua de madera tallada a mano con detalles intrincados, perfecta para los coleccionistas de arte antiguo."
   },
   {
     "id": 17,
     "title": "Carved Olivewood Figurine",
     "title_ar": "تمثال صغير من خشب الزيتون",
     "title_it": "Statuina in legno di ulivo intagliato",
+    "title_fr": "Figurine en bois d'olivier sculpté",
+    "title_es": "Figura de madera de olivo tallada",
     "image": "images/mini_magick20260128-31585-5uglbg.jpg",
     "description": "A hand-carved olivewood figurine with a smooth finish and subtle tooling marks; ideal as a tabletop accent or collector's piece.",
     "description_ar": "تمثال صغير من خشب الزيتون منحوت يدوياً بلمسة ناعمة وعلامات أدوات دقيقة؛ مثالي كتحفة للطاولة.",
-    "description_it": "Una statuina in legno di ulivo intagliata a mano con una finitura liscia e sottili segni di lavorazione; ideale come accento da tavola o pezzo da collezione."
+    "description_it": "Una statuina in legno di ulivo intagliata a mano con una finitura liscia e sottili segni di lavorazione; ideale come accento da tavola o pezzo da collezione.",
+    "description_fr": "Une figurine en bois d'olivier sculptée à la main avec une finition lisse et de subtiles marques d'outillage ; idéale comme touche décorative de table ou pièce de collection.",
+    "description_es": "Una figura de madera de olivo tallada a mano con un acabado suave y sutiles marcas de herramientas; ideal como acento de mesa o pieza de colección."
   },
   {
     "id": 18,
     "title": "Porcelain Shell Dish",
     "title_ar": "طبق بورسلين على شكل صدفة",
     "title_it": "Piatto a conchiglia in porcellana",
+    "title_fr": "Plat en porcelaine en forme de coquille",
+    "title_es": "Plato de porcelana en forma de concha",
     "image": "images/mini_magick20260128-31585-ehet06.jpg",
     "description": "A small porcelain dish shaped like a shell, glazed with a soft ivory finish — perfect for jewelry or trinkets.",
     "description_ar": "طبق بورسلين صغير على شكل صدفة، مزجج بلمسة عاجية ناعمة - مثالي للمجوهرات أو الحلي.",
-    "description_it": "Un piccolo piatto in porcellana a forma di conchiglia, smaltato con una morbida finitura avorio, perfetto per gioielli o cianfrusaglie."
+    "description_it": "Un piccolo piatto in porcellana a forma di conchiglia, smaltato con una morbida finitura avorio, perfetto per gioielli o cianfrusaglie.",
+    "description_fr": "Un petit plat en porcelaine en forme de coquille, émaillé avec une finition ivoire douce - parfait pour les bijoux ou les bibelots.",
+    "description_es": "Un pequeño plato de porcelana con forma de concha, vidriado con un suave acabado marfil, perfecto para joyas o baratijas."
   },
   {
     "id": 19,
     "title": "Brass Incense Burner",
     "title_ar": "مبخرة نحاسية",
     "title_it": "Bruciatore di incenso in ottone",
+    "title_fr": "Brûleur d'encens en laiton",
+    "title_es": "Quemador de incienso de latón",
     "image": "images/mini_magick20260128-31585-eilnyf.jpg",
     "description": "A compact brass incense burner with pierced patterns for gentle smoke dispersion; adds warmth to any room.",
     "description_ar": "مبخرة نحاسية مدمجة بأنماط مخرمة لتوزيع الدخان بلطف؛ تضيف دفئاً إلى أي غرفة.",
-    "description_it": "Un bruciatore di incenso compatto in ottone con motivi traforati per una delicata dispersione del fumo; aggiunge calore a qualsiasi stanza."
+    "description_it": "Un bruciatore di incenso compatto in ottone con motivi traforati per una delicata dispersione del fumo; aggiunge calore a qualsiasi stanza.",
+    "description_fr": "Un brûleur d'encens compact en laiton avec des motifs percés pour une dispersion douce de la fumée ; ajoute de la chaleur à n'importe quelle pièce.",
+    "description_es": "Un práctico quemador de incienso de latón con patrones perforados para una suave dispersión del humo; aporta calidez a cualquier habitación."
   },
   {
     "id": 20,
     "title": "Woven Leather Basket",
     "title_ar": "سلة جلدية منسوجة",
     "title_it": "Cesto in pelle intrecciata",
+    "title_fr": "Panier en cuir tressé",
+    "title_es": "Cesta de cuero tejido",
     "image": "images/mini_magick20260128-31585-guw8rl.jpg",
     "description": "A hand-stitched woven leather basket suitable for storage or as a decorative catch-all; the natural patina gives it character.",
     "description_ar": "سلة جلدية منسوجة مخيطة يدوياً مناسبة للتخزين أو كقطعة ديكور؛ يمنحها المظهر العتيق طابعاً خاصاً.",
-    "description_it": "Un cesto in pelle intrecciato e cucito a mano adatto per riporre oggetti o come svuotatasche decorativo; la patina naturale gli conferisce carattere."
+    "description_it": "Un cesto in pelle intrecciato e cucito a mano adatto per riporre oggetti o come svuotatasche decorativo; la patina naturale gli conferisce carattere.",
+    "description_fr": "Un panier en cuir tressé cousu à la main servant au rangement ou comme vide-poche décoratif ; la patine naturelle lui donne du caractère.",
+    "description_es": "Una cesta de cuero tejido cosida a mano adecuada para el almacenamiento o como un práctico objeto decorativo; la pátina natural le otorga carácter."
   },
   {
     "id": 21,
     "title": "Inlaid Mosaic Ornament",
     "title_ar": "زخرفة موزاييك مطعمة",
     "title_it": "Ornamento a mosaico intarsiato",
+    "title_fr": "Ornement en mosaïque incrustée",
+    "title_es": "Ornamento de mosaico incrustado",
     "image": "images/mini_magick20260128-31585-ji99ex.jpg",
     "description": "A small ornament featuring colorful inlaid tiles arranged in a traditional mosaic pattern; great for shelves or gift-giving.",
     "description_ar": "زخرفة صغيرة تتميز ببلاطات مطعمة ملونة مرتبة بنمط موزاييك تقليدي؛ رائعة للأرفف أو كهدية.",
-    "description_it": "Un piccolo ornamento caratterizzato da tessere colorate intarsiate disposte in un tradizionale motivo a mosaico; ottimo per scaffali o regalistica."
+    "description_it": "Un piccolo ornamento caratterizzato da tessere colorate intarsiate disposte in un tradizionale motivo a mosaico; ottimo per scaffali o regalistica.",
+    "description_fr": "Un petit ornement composé de carreaux incrustés colorés disposés dans un motif de mosaïque traditionnel ; idéal pour les étagères ou pour offrir.",
+    "description_es": "Un pequeño adorno con coloridos azulejos incrustados dispuestos en un patrón de mosaico tradicional; ideal para estanterías o para regalar."
   },
   {
     "id": 22,
     "title": "Terracotta Oil Lamp",
     "title_ar": "مصباح زيتي من الفخار",
     "title_it": "Lampada ad olio in terracotta",
+    "title_fr": "Lampe à huile en terre cuite",
+    "title_es": "Lámpara de aceite de terracota",
     "image": "images/mini_magick20260128-31585-oaveq7.jpg",
     "description": "A hand-molded terracotta oil lamp with a rustic finish — functional and decorative, echoing historic lighting forms.",
     "description_ar": "مصباح زيتي فخاري مشكل يدوياً بلمسة ريفية - عملي وزخرفي، يذكرنا بأشكال الإضاءة التاريخية.",
-    "description_it": "Una lampada ad olio in terracotta modellata a mano con una finitura rustica - funzionale e decorativa, che riecheggia le storiche forme di illuminazione."
+    "description_it": "Una lampada ad olio in terracotta modellata a mano con una finitura rustica - funzionale e decorativa, che riecheggia le storiche forme di illuminazione.",
+    "description_fr": "Une lampe à huile en terre cuite moulée à la main avec une finition rustique - fonctionnelle et décorative, faisant écho aux formes d'éclairage historiques.",
+    "description_es": "Una lámpara de aceite de terracota moldeada a mano con un acabado rústico: funcional y decorativa, evoca formas de iluminación históricas."
   },
   {
     "id": 23,
     "title": "Handpainted Trinket Box",
     "title_ar": "صندوق صغير ملون يدوياً",
     "title_it": "Portagioie dipinto a mano",
+    "title_fr": "Boîte à bibelots peinte à la main",
+    "title_es": "Joyero pintado a mano",
     "image": "images/mini_magick20260128-31585-rbai2v.jpg",
     "description": "A small wooden trinket box handpainted with floral motifs and a lacquered finish; perfect for keepsakes and jewelry.",
     "description_ar": "صندوق خشبي صغير ملون يدوياً بزخارف وردية ومطلي؛ مثالي للهدايا والمجوهرات.",
-    "description_it": "Un piccolo scrigno in legno dipinto a mano con motivi floreali e finitura laccata; perfetto per ricordi e gioielli."
+    "description_it": "Un piccolo scrigno in legno dipinto a mano con motivi floreali e finitura laccata; perfetto per ricordi e gioielli.",
+    "description_fr": "Un petit coffret en bois peint à la main avec des motifs floraux et une finition laquée ; parfait pour les souvenirs et les bijoux.",
+    "description_es": "Un pequeño joyero de madera pintado a mano con motivos florales y un acabado lacado; perfecto para recuerdos y joyas."
   },
   {
     "id": 24,
     "title": "Antique Textile Fragment",
     "title_ar": "قطعة نسيج عتيقة",
     "title_it": "Frammento di tessuto antico",
+    "title_fr": "Fragment de textile antique",
+    "title_es": "Fragmento textil antiguo",
     "image": "images/mini_magick20260128-31585-t5g8fc.jpg",
     "description": "A framed fragment of antique textile showing traditional weaving and natural dyes — a distinctive wall accent for collectors.",
     "description_ar": "قطعة مؤطرة من نسيج عتيق تظهر النسج التقليدي والأصباغ الطبيعية - لوحة جدارية مميزة للهواة.",
-    "description_it": "Un frammento incorniciato di tessuto antico che mostra la tessitura tradizionale e le tinture naturali: un originale accento da parete per i collezionisti."
+    "description_it": "Un frammento incorniciato di tessuto antico che mostra la tessitura tradizionale e le tinture naturali: un originale accento da parete per i collezionisti.",
+    "description_fr": "Un fragment encadré de textile antique présentant un tissage traditionnel et des teintures naturelles - un accent mural distinctif pour les collectionneurs.",
+    "description_es": "Un fragmento enmarcado de textil antiguo que muestra el tejido tradicional y los tintes naturales: una distinción de pared característica para coleccionistas."
   },
   {
     "id": 25,
     "title": "Stamped Metal Coaster Set",
     "title_ar": "طقم قواعد أكواب معدنية",
     "title_it": "Set di sottobicchieri in metallo stampato",
+    "title_fr": "Ensemble de dessous de verre en métal estampé",
+    "title_es": "Juego de posavasos de metal estampado",
     "image": "images/mini_magick20260128-32454-4unz37.jpg",
     "description": "A set of four stamped metal coasters with decorative motifs; durable and stylish for everyday use or entertaining.",
     "description_ar": "طقم مكون من أربع قواعد أكواب معدنية منقوشة بزخارف؛ متينة وأنيقة للاستخدام اليومي.",
-    "description_it": "Un set di quattro sottobicchieri in metallo stampato con motivi decorativi; resistenti ed eleganti per l'uso quotidiano o per gli ospiti."
+    "description_it": "Un set di quattro sottobicchieri in metallo stampato con motivi decorativi; resistenti ed eleganti per l'uso quotidiano o per gli ospiti.",
+    "description_fr": "Un ensemble de quatre dessous de verre en métal estampé avec des motifs décoratifs ; durables et élégants pour un usage quotidien ou pour recevoir.",
+    "description_es": "Un juego de cuatro posavasos de metal estampado con motivos decorativos; duraderos y elegantes para el uso diario o para invitados."
   },
   {
     "id": 26,
     "title": "Enamel Tea Caddy",
     "title_ar": "علبة شاي من المينا",
     "title_it": "Contenitore per tè in smalto",
+    "title_fr": "Boîte à thé émaillée",
+    "title_es": "Caja de té esmaltada",
     "image": "images/mini_magick20260128-32454-5c6fl1.jpg",
     "description": "An enamelled tea caddy with a snug lid and decorative finish — keeps loose tea fresh while adding charm to the kitchen.",
     "description_ar": "علبة شاي من المينا بغطاء محكم ولمسة زخرفية - تحافظ على الشاي طازجاً وتضيف لمسة جمالية للمطبخ.",
-    "description_it": "Un contenitore per il tè smaltato con coperchio aderente e finitura decorativa: mantiene fresco il tè in foglie aggiungendo fascino alla cucina."
+    "description_it": "Un contenitore per il tè smaltato con coperchio aderente e finitura decorativa: mantiene fresco il tè in foglie aggiungendo fascino alla cucina.",
+    "description_fr": "Une boîte à thé émaillée avec un couvercle ajusté et une finition décorative - garde le thé en vrac frais tout en ajoutant du charme à la cuisine.",
+    "description_es": "Un bote de té esmaltado con una tapa ajustada y un acabado decorativo; mantiene el té a granel fresco mientras añade encanto a la cocina."
   },
   {
     "id": 27,
     "title": "Reclaimed Wood Wall Hook",
     "title_ar": "خطاف حائط من الخشب المستصلح",
     "title_it": "Gancio da parete in legno di recupero",
+    "title_fr": "Crochet mural en bois récupéré",
+    "title_es": "Gancho de pared de madera recuperada",
     "image": "images/mini_magick20260128-32454-5ngc6h.jpg",
     "description": "A rustic wall hook crafted from reclaimed wood with a metal peg; practical for entryways and adds vintage character.",
     "description_ar": "خطاف حائط ريفي مصنوع من الخشب المستصلح مع وتد معدني؛ عملي للمداخل ويضيف طابعاً كلاسيكياً.",
-    "description_it": "Un rustico gancio da parete realizzato in legno di recupero con un piolo in metallo; pratico per gli ingressi e aggiunge un carattere vintage."
+    "description_it": "Un rustico gancio da parete realizzato in legno di recupero con un piolo in metallo; pratico per gli ingressi e aggiunge un carattere vintage.",
+    "description_fr": "Un crochet mural rustique fabriqué à partir de bois récupéré avec une cheville en métal ; pratique pour les entrées et ajoute un caractère vintage.",
+    "description_es": "Un gancho de pared rústico hecho de madera recuperada con una espiga de metal; práctico para entradas y añade carácter vintage."
   },
   {
     "id": 28,
     "title": "Silver Filigree Pendant",
     "title_ar": "قلادة فضية مشغولة (فيليجري)",
     "title_it": "Pendente in filigrana d'argento",
+    "title_fr": "Pendentif en filigrane d'argent",
+    "title_es": "Colgante de filigrana de plata",
     "image": "images/mini_magick20260128-32454-b0nszn.jpg",
     "description": "A delicately crafted silver filigree pendant suspended on a simple cord; an elegant accessory with artisanal detail.",
     "description_ar": "قلادة فضية مصنوعة بدقة بنمط الفيليجري معلقة على خيط بسيط؛ إكسسوار أنيق بتفاصيل حرفية.",
-    "description_it": "Un pendente in filigrana d'argento delicatamente lavorato sospeso su un semplice cordoncino; un accessorio elegante con dettagli artigianali."
+    "description_it": "Un pendente in filigrana d'argento delicatamente lavorato sospeso su un semplice cordoncino; un accessorio elegante con dettagli artigianali.",
+    "description_fr": "Un pendentif en filigrane d'argent délicatement fabriqué suspendu à un simple cordon ; un accessoire élégant avec des détails artisanaux.",
+    "description_es": "Un colgante de filigrana de plata delicadamente elaborado suspendido de un sencillo cordón; un elegante accesorio con detalles artesanales."
   },
   {
     "id": 29,
     "title": "Stamped Copper Serving Spoon",
     "title_ar": "ملعقة تقديم نحاسية منقوشة",
     "title_it": "Cucchiaio servitore in rame stampato",
+    "title_fr": "Cuillère de service en cuivre estampé",
+    "title_es": "Cuchara de servir de cobre estampado",
     "image": "images/mini_magick20260128-32454-coijya.jpg",
     "description": "A large hand-stamped copper serving spoon with a warm patina; ideal for serving or display in a vintage kitchen.",
     "description_ar": "ملعقة تقديم نحاسية كبيرة مصنوعة يدوياً بلمسة عتيقة؛ مثالية للتقديم أو العرض في مطبخ كلاسيكي.",
-    "description_it": "Un grande cucchiaio da portata in rame stampato a mano con una calda patina; ideale per servire o da esporre in una cucina vintage."
+    "description_it": "Un grande cucchiaio da portata in rame stampato a mano con una calda patina; ideale per servire o da esporre in una cucina vintage.",
+    "description_fr": "Une grande cuillère de service en cuivre estampée à la main avec une patine chaleureuse ; idéale pour le service ou l'exposition dans une cuisine vintage.",
+    "description_es": "Una gran cuchara de servir de cobre estampada a mano con una pátina cálida; ideal para servir o exhibir en una cocina vintage."
   },
   {
     "id": 30,
     "title": "Mini Ceramic Bowl",
     "title_ar": "وعاء سيراميك صغير",
     "title_it": "Mini ciotola in ceramica",
+    "title_fr": "Mini bol en céramique",
+    "title_es": "Mini cuenco de cerámica",
     "image": "images/mini_magick20260128-32454-e7wymm.jpg",
     "description": "A small glazed ceramic bowl, perfect for sauces, spices, or as a decorative accent on a shelf.",
     "description_ar": "وعاء سيراميك صغير مزجج، مثالي للصلصات أو التوابل أو كقطعة ديكور على الرف.",
-    "description_it": "Una piccola ciotola in ceramica smaltata, perfetta per salse, spezie o come accento decorativo su una mensola."
+    "description_it": "Una piccola ciotola in ceramica smaltata, perfetta per salse, spezie o come accento decorativo su una mensola.",
+    "description_fr": "Un petit bol en céramique émaillée, parfait pour les sauces, les épices ou comme accent décoratif sur une étagère.",
+    "description_es": "Un pequeño cuenco de cerámica vidriada, perfecto para salsas, especias o como acento decorativo en un estante."
   },
   {
     "id": 31,
     "title": "Gilded Frame Mirror",
     "title_ar": "مرآة بإطار مذهب",
     "title_it": "Specchio con cornice dorata",
+    "title_fr": "Miroir à cadre doré",
+    "title_es": "Espejo con marco dorado",
     "image": "images/mini_magick20260128-32454-o5gdbx.jpg",
     "description": "A small mirror set in a gilded frame with subtle ornamentation — perfect for dressing tables or wall groupings.",
     "description_ar": "مرآة صغيرة في إطار مذهب بزخارف رقيقة - مثالية لطاولات التزيين أو مجموعات الحائط.",
-    "description_it": "Uno specchio piccolo inserito in una cornice dorata con sottili ornamenti - perfetto per tavoli da toeletta o composizioni a parete."
+    "description_it": "Uno specchio piccolo inserito in una cornice dorata con sottili ornamenti - perfetto per tavoli da toeletta o composizioni a parete.",
+    "description_fr": "Un petit miroir placé dans un cadre doré avec une ornementation subtile - parfait pour les coiffeuses ou les groupes muraux.",
+    "description_es": "Un pequeño espejo engastado en un marco dorado con una sutil ornamentación, perfecto para tocadores o conjuntos de pared."
   },
   {
     "id": 32,
     "title": "Targi Conversation Print",
     "title_ar": "لوحة حديث الطوارق",
     "title_it": "Stampa di conversazione Targi",
+    "title_fr": "Impression de conversation Targi",
+    "title_es": "Impresión de conversación Targi",
     "image": "images/two targi men talking by tariq elshebly.jpg",
     "description": "A vivid print showing two Targi men in conversation — full of regional character and storytelling.",
     "description_ar": "لوحة حيوية تظهر رجلين من الطوارق في حديث - مليئة بالطابع الإقليمي والقصص.",
-    "description_it": "Una vivida stampa che mostra due uomini Targi in conversazione: piena di carattere regionale e narrazione."
+    "description_it": "Una vivida stampa che mostra due uomini Targi in conversazione: piena di carattere regionale e narrazione.",
+    "description_fr": "Une impression vive montrant deux hommes Targi en conversation - pleine de caractère régional et de narration.",
+    "description_es": "Una impresión vívida que muestra a dos hombres Targi conversando: llena de carácter regional y narración."
   }
 ]

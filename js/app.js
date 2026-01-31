@@ -1,6 +1,23 @@
 const PRODUCTS_URL = 'data/products.json';
-let currentLang = localStorage.getItem('mufti_lang') || 'en';
+let currentLang = localStorage.getItem('site-lang') || 'en';
 let translations = {};
+
+// Custom Dropdown Logic
+window.toggleDropdown = function() {
+  document.getElementById('custom-lang-dropdown').classList.toggle('open');
+};
+
+window.selectLang = function(lang) {
+  changeLanguage(lang);
+  document.getElementById('custom-lang-dropdown').classList.remove('open');
+};
+
+document.addEventListener('click', (e) => {
+  const dd = document.getElementById('custom-lang-dropdown');
+  if (dd && !dd.contains(e.target) && e.target.id !== 'lang-toggle-btn') { // Added check for toggle button
+    dd.classList.remove('open');
+  }
+});
 
 async function loadTranslations() {
   try {
@@ -27,6 +44,13 @@ function applyTranslations() {
   document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
   document.body.classList.toggle('rtl', currentLang === 'ar');
 
+  // Sync custom dropdown flag if it exists
+  const flagImg = document.getElementById('current-flag');
+  if (flagImg) {
+    const flagCodes = { en: 'us', ar: 'ly', it: 'it', fr: 'fr', es: 'es' };
+    flagImg.src = `https://flagcdn.com/w40/${flagCodes[currentLang]}.png`;
+  }
+
   // Trigger content refreshes
   renderFeatured();
   renderProductsGrid();
@@ -34,7 +58,7 @@ function applyTranslations() {
 
 async function changeLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('mufti_lang', lang);
+  localStorage.setItem('site-lang', lang); // Updated to 'site-lang'
   applyTranslations();
   await renderFeatured();
   await renderProductsGrid();
@@ -251,7 +275,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   setupHeroSlideshow();
   initNavigation();
 
-  // Initial render (English/Fallback) while translations load
+  // Initial render  // Ensure products render after translations are ready
   renderFeatured();
   renderProductsGrid();
+
+  // Sync dropdown if it exists
+  const select = document.getElementById('lang-select');
+  if (select) select.value = currentLang;
 });

@@ -17,6 +17,64 @@
       />
       <span>Mufti Gallery</span>
     </h1>
+    <div
+      class="header-actions"
+      style="display: flex; align-items: center; gap: 1rem"
+    >
+      <div id="custom-lang-dropdown" class="custom-dropdown">
+        <div class="dropdown-trigger" onclick="toggleDropdown()">
+          <img
+            id="current-flag"
+            src="https://flagcdn.com/w40/us.png"
+            alt="Current Language"
+            class="dropdown-flag"
+          />
+          <span class="dropdown-arrow">▼</span>
+        </div>
+        <div id="dropdown-options" class="dropdown-options">
+          <div class="dropdown-option" onclick="selectLang('en')">
+            <img
+              src="https://flagcdn.com/w40/us.png"
+              alt="English"
+              class="dropdown-flag"
+            />
+            <span>EN</span>
+          </div>
+          <div class="dropdown-option" onclick="selectLang('ar')">
+            <img
+              src="https://flagcdn.com/w40/ly.png"
+              alt="Arabic"
+              class="dropdown-flag"
+            />
+            <span>AR</span>
+          </div>
+          <div class="dropdown-option" onclick="selectLang('it')">
+            <img
+              src="https://flagcdn.com/w40/it.png"
+              alt="Italian"
+              class="dropdown-flag"
+            />
+            <span>IT</span>
+          </div>
+          <div class="dropdown-option" onclick="selectLang('fr')">
+            <img
+              src="https://flagcdn.com/w40/fr.png"
+              alt="French"
+              class="dropdown-flag"
+            />
+            <span>FR</span>
+          </div>
+          <div class="dropdown-option" onclick="selectLang('es')">
+            <img
+              src="https://flagcdn.com/w40/es.png"
+              alt="Spanish"
+              class="dropdown-flag"
+            />
+            <span>ES</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -28,39 +86,6 @@
       <a href="#about" data-i18n="about">About</a>
       <a href="#contact" data-i18n="contact">Contact</a>
     </nav>
-    <div
-      class="lang-switcher"
-      style="
-        margin-top: 2rem;
-        padding: 1.5rem 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-      "
-    >
-      <h4
-        style="
-          margin-bottom: 0.75rem;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.9rem;
-          color: var(--accent);
-        "
-      >
-        <span style="font-size: 1.1rem">🌐</span>
-        <span data-i18n="language">Language</span>
-      </h4>
-      <div style="display: flex; gap: 0.5rem">
-        <button class="btn btn-sm lang-btn" onclick="changeLanguage('en')">
-          EN
-        </button>
-        <button class="btn btn-sm lang-btn" onclick="changeLanguage('ar')">
-          AR
-        </button>
-        <button class="btn btn-sm lang-btn" onclick="changeLanguage('it')">
-          IT
-        </button>
-      </div>
-    </div>
   </div>
 </aside>
 
