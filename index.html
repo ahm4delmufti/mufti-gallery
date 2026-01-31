@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Mufti Gallery — Antiques & Curios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -12,12 +18,14 @@
     <main>
       <section id="home" class="hero">
         <div class="container reveal-stagger">
-          <h2>Authentic Antiques & Timeless Curios</h2>
-          <p>
+          <h2 data-i18n="hero_title">Authentic Antiques & Timeless Curios</h2>
+          <p data-i18n="hero_desc">
             Discover hand-picked antiques and decorative pieces for collectors
             and interior lovers.
           </p>
-          <a class="btn" href="#shop">Browse the Collection</a>
+          <a class="btn" href="#shop" data-i18n="browse"
+            >Browse the Collection</a
+          >
         </div>
         <div class="hero-slides" aria-hidden="true">
           <img
@@ -44,9 +52,14 @@
         </div>
       </section>
 
+      <section id="featured" class="container featured reveal-stagger">
+        <h3 data-i18n="featured_title">Featured Items</h3>
+        <div id="featured-grid" class="grid"></div>
+      </section>
+
       <section id="about" class="container about reveal-stagger">
-        <h3>About Mufti Gallery</h3>
-        <p>
+        <h3 data-i18n="about_title">About Mufti Gallery</h3>
+        <p data-i18n="about_p1">
           Established in 1953 by Ahmed Elmufti, Mufti Gallery began as a small
           family shop focused on local antiques and handcrafted pieces. The
           gallery continues to operate today under the management of Ibrahim
@@ -55,8 +68,8 @@
           regionally.
         </p>
 
-        <h4>History</h4>
-        <p>
+        <h4 data-i18n="about_history">History</h4>
+        <p data-i18n="about_p2">
           From our modest beginnings in 1953 to the present day, Mufti Gallery
           has remained dedicated to preserving and sharing unique pieces with
           collectors and interior lovers alike. Each item is inspected and
@@ -66,8 +79,8 @@
       </section>
 
       <section id="shop" class="shop-top container">
-        <h2>Shop the Collection</h2>
-        <p>Click an item to view details.</p>
+        <h2 data-i18n="shop_title">Shop the Collection</h2>
+        <p data-i18n="shop_desc">Click an item to view details.</p>
       </section>
 
       <section id="products" class="container">
@@ -75,8 +88,10 @@
       </section>
 
       <section id="contact" class="container contact">
-        <h3>Contact</h3>
-        <p>For inquiries or custom requests contact us:</p>
+        <h3 data-i18n="contact_title">Contact</h3>
+        <p data-i18n="contact_desc">
+          For inquiries or custom requests contact us:
+        </p>
         <ul>
           <li>Phone: +218 92 376 3407</li>
           <li>Phone: +218 91 376 3407</li>
@@ -88,7 +103,7 @@
           </li>
         </ul>
         <section class="social">
-          <h3>Follow Us</h3>
+          <h3 data-i18n="follow_us">Follow Us</h3>
 
           <a
             href="https://www.instagram.com/muftiforantiques?igsh=cmhycm5sdHBqOHZo"
