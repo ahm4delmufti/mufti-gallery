@@ -18,7 +18,12 @@
     "follow_us": "Follow Us",
     "details": "Details",
     "language": "Language",
-    "featured_title": "Featured Items"
+    "featured_title": "Featured Items",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message"
   },
   "ar": {
     "home": "الرئيسية",
@@ -39,7 +44,12 @@
     "follow_us": "تابعونا",
     "details": "التفاصيل",
     "language": "اللغة",
-    "featured_title": "قطع مختارة"
+    "featured_title": "قطع مختارة",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "إرسال الرسالة"
   },
   "it": {
     "home": "Home",
@@ -60,7 +70,12 @@
     "follow_us": "Seguici",
     "details": "Dettagli",
     "language": "Lingua",
-    "featured_title": "Articoli in Primo Piano"
+    "featured_title": "Articoli in Primo Piano",
+    "name": "Nome",
+    "email": "Email",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "send": "Invia Messaggio"
   },
   "fr": {
     "home": "Accueil",
@@ -81,7 +96,12 @@
     "follow_us": "Suivez-nous",
     "details": "Détails",
     "language": "Langue",
-    "featured_title": "Articles Vedettes"
+    "featured_title": "Articles Vedettes",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer le Message"
   },
   "es": {
     "home": "Inicio",
@@ -102,7 +122,12 @@
     "follow_us": "Síguenos",
     "details": "Detalles",
     "language": "Idioma",
-    "featured_title": "Artículos Destacados"
+    "featured_title": "Artículos Destacados",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje"
   },
   "zh": {
     "home": "首页",
@@ -123,6 +148,11 @@
     "follow_us": "关注我们",
     "details": "详情",
     "language": "语言",
-    "featured_title": "精选物品"
+    "featured_title": "精选物品",
+    "name": "姓名",
+    "email": "电子邮件",
+    "subject": "主题",
+    "message": "消息",
+    "send": "发送消息"
   }
 }

@@ -186,7 +186,6 @@ body.rtl .dropdown-options { right: auto; left: 0; }
 .card-title{font-weight:600;margin:0 0 .25rem}
 .card-price{color:var(--accent);font-weight:600}
 .site-footer{border-top:1px solid #eee;padding:.6rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
-.site-footer{border-top:1px solid #eee;padding:.6rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
 .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
 .modal.hidden{display:none}
 .modal-content{background:#fff;padding:1rem;border-radius:8px;max-width:760px;width:95%}
@@ -359,7 +358,10 @@ body.sidebar-open::after { opacity: 1; visibility: visible; }
 
 /* Header toggle */
 /* Floating hamburger placed at the left edge for small screens */
-.sidebar-toggle{background:transparent;border:0;font-size:1.3rem;cursor:pointer;padding:.45rem .6rem;margin:0;display:inline-flex;align-items:center;justify-content:center}
+.sidebar-toggle{background:transparent;border:0;font-size:1.3rem;cursor:pointer;padding:.45rem .6rem;margin:0;display:inline-flex;align-items:center;justify-content:center;color:var(--text);transition:all 0.2s ease;}
+[data-theme="dark"] .sidebar-toggle { background: var(--surface); color: var(--accent); border: 1px solid var(--border); border-radius: 8px; }
+.sidebar-toggle:hover { color: var(--accent); }
+
 .sidebar-toggle:focus{outline:2px solid rgba(107,79,63,0.2);border-radius:6px}
 .site-header .container{display:flex;align-items:center}
 
@@ -400,8 +402,11 @@ body.sidebar-open::after { opacity: 1; visibility: visible; }
   border-top: 1px solid var(--border);
   padding: 3rem 0;
   margin-top: 4rem;
-  color: var(--muted);
+  color: var(--text);
 }
+[data-theme="dark"] .site-footer { color: var(--text); background: #161210; }
+.site-footer span.small { color: var(--muted); }
+
 
 .site-footer .container {
   display: flex;
@@ -415,5 +420,11 @@ body.sidebar-open::after { opacity: 1; visibility: visible; }
   height: 32px;
   width: auto;
   border-radius: 4px;
-  margin-right: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
+
+
+.social { margin-top: 2rem; margin-bottom: 2rem; }
+.social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+.social-links a { transition: transform 0.2s ease; }
+.social-links a:hover { transform: scale(1.1); }

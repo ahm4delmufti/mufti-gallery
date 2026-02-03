@@ -1,4 +1,5 @@
-const PRODUCTS_URL = 'data/products.json';
+const PRODUCTS_URL = 'http://localhost:5000/api/products';
+const CONTACT_URL = 'http://localhost:5000/api/contact';
 let currentLang = localStorage.getItem('site-lang') || 'en';
 let translations = {};
 
@@ -84,8 +85,21 @@ async function changeLanguage(lang) {
 }
 
 async function fetchProducts(){
-  const res = await fetch(PRODUCTS_URL);
-  return res.json();
+  try {
+    const res = await fetch(PRODUCTS_URL);
+    if (!res.ok) throw new Error('Backend fetch failed');
+    return await res.json();
+  } catch (err) {
+    console.warn("Backend unavailable, falling back to local JSON:", err);
+    try {
+      const localRes = await fetch('data/products.json');
+      if (!localRes.ok) throw new Error('Local JSON fetch failed');
+      return await localRes.json();
+    } catch (localErr) {
+      console.error("Critical: Could not load products from any source:", localErr);
+      return [];
+    }
+  }
 }
 
 async function renderFeatured(){
@@ -303,7 +317,40 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupHeroSlideshow();
   initNavigation();
 
+  // Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+
+      try {
+        const res = await fetch(CONTACT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        if (res.ok) {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        } else {
+          alert('Failed to send message.');
+        }
+      } catch (err) {
+        console.error('Contact error:', err);
+        alert('Server error. Please try again later.');
+      }
+    });
+  }
+
   // Initial render
-  renderFeatured();
-  renderProductsGrid();
+  setTimeout(() => {
+    renderFeatured();
+    renderProductsGrid();
+  }, 100);
 });
